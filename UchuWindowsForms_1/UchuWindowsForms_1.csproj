@@ -50,17 +50,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB.cs" />
-    <Compile Include="LginForm.cs">
+    <Compile Include="CardRegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LginForm.Designer.cs">
-      <DependentUpon>LginForm.cs</DependentUpon>
+    <Compile Include="CardRegistrationForm.Designer.cs">
+      <DependentUpon>CardRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LginForm.resx">
-      <DependentUpon>LginForm.cs</DependentUpon>
+    <Compile Include="RegistrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrForm.Designer.cs">
+      <DependentUpon>RegistrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serviseCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serviseCatalog.Designer.cs">
+      <DependentUpon>serviseCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useServise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="useServise.Designer.cs">
+      <DependentUpon>useServise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visitCentr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visitCentr.Designer.cs">
+      <DependentUpon>visitCentr.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CardRegistrationForm.resx">
+      <DependentUpon>CardRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +114,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrForm.resx">
+      <DependentUpon>RegistrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serviseCatalog.resx">
+      <DependentUpon>serviseCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useServise.resx">
+      <DependentUpon>useServise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visitCentr.resx">
+      <DependentUpon>visitCentr.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

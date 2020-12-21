@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace UchuWindowsForms_1
 {
-	public partial class LginForm : Form
+	public partial class LoginForm : Form
 	{
-		public LginForm()
+		public LoginForm()
 		{
 			InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace UchuWindowsForms_1
 		
 		private void closeButton_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Application.Exit();
 		}
 
 		private void closeButton_MouseEnter(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace UchuWindowsForms_1
 
 
 			//MySqlCommand COMMAND = new MySqlCommand("SELECT * FROM `employee` WHERE `login` = loginUser AND  `pass` = passUser ");
-			MySqlCommand command = new MySqlCommand("SELECT * FROM `employe` WHERE `login` = @uL AND  `pass` = @uP ", db.getConnection());
+			MySqlCommand command = new MySqlCommand("SELECT * FROM `employee` WHERE `login` = @uL AND  `pass` = @uP ", db.getConnection());
 
 			//command.Parameters.Add("@uL", MySqlDbType.Text).Value = loginUser; //Для постгресса
 			//command.Parameters.Add("@uP", MySqlDbType.Text).Value = passUser;  //Для постгресса
@@ -103,15 +103,27 @@ namespace UchuWindowsForms_1
 
 			if (table.Rows.Count  > 0)
 			{
-				MessageBox.Show("Yes");
+				this.Hide();
+				MainForm mainForm = new MainForm();//Переход на главную форму
+				mainForm.Show();
+
 			}
 			else
 			{
-				MessageBox.Show("No");
+				MessageBox.Show("Работника с таким логином или паролем не существует");
 			}
 
 		}
 
-		
+		private void loginField_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+
+
+
+
+
 	}
 }
