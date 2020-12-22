@@ -11,14 +11,20 @@ using System.Windows.Forms;
 
 namespace UchuWindowsForms_1
 {
-	public partial class useServise : Form
+	public partial class TimeTible : Form
 	{
-		public useServise()
+		public TimeTible()
 		{
 			InitializeComponent();
-			LoadFullData();
+			LoadDataTeining();
 		}
-		private void LoadFullData()
+
+		private void closeButton_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void LoadDataTeining()
 		{
 
 			string connectString;
@@ -26,10 +32,13 @@ namespace UchuWindowsForms_1
 			connectString = "server=localhost; port=3306; username=root; password=root; database=fitness_center";
 
 			MySqlConnection mySqlConnection = new MySqlConnection(connectString);
-
-			mySqlConnection.Open();
 			
-			string query = "SELECT `id`, `name`, `used`, `can be used`, `idCardCustomer` FROM `active_services` GROUP BY  active_services.id";
+			mySqlConnection.Open();
+
+			string query = "SELECT `id`, `discipline`, `start`, `finish`, `trainer`, DAYname(start) FROM `group_training`";
+			
+
+
 
 			MySqlCommand command = new MySqlCommand(query, mySqlConnection);
 
@@ -39,13 +48,14 @@ namespace UchuWindowsForms_1
 
 			while (reader.Read())
 			{
-				data.Add(new string[5]);
+				data.Add(new string[6]);
 
 				data[data.Count - 1][0] = reader[0].ToString();
 				data[data.Count - 1][1] = reader[1].ToString();
 				data[data.Count - 1][2] = reader[2].ToString();
 				data[data.Count - 1][3] = reader[3].ToString();
 				data[data.Count - 1][4] = reader[4].ToString();
+				data[data.Count - 1][5] = reader[5].ToString();
 			}
 			reader.Close();
 			mySqlConnection.Close();
@@ -59,27 +69,14 @@ namespace UchuWindowsForms_1
 
 		}
 
-		private void useServisebutton_Click(object sender, EventArgs e)
+		private void disciplineSearchServise_Click(object sender, EventArgs e)
 		{
-			useServiseButFunction();//Всё выполнение в функции
+			disciplineSearch();
 		}
 
 
-		private void closeButton_Click(object sender, EventArgs e)
+		private void disciplineSearch()
 		{
-			Application.Exit();
-		}
-
-		private void back_Click(object sender, EventArgs e)
-		{
-			this.Hide();
-			MainForm mainForm = new MainForm();//Переход на гоавную
-			mainForm.Show();
-		}
-
-		private void buttonSearch_Click(object sender, EventArgs e)
-		{
-
 			dataGridView1.Rows.Clear();//Очищает таблицу
 
 			string connectString;
@@ -88,12 +85,13 @@ namespace UchuWindowsForms_1
 
 			MySqlConnection mySqlConnection = new MySqlConnection(connectString);
 
-			string idCardCudtomer = cardIdField.Text;
-
 			mySqlConnection.Open();
 
-			string query = "SELECT `id`, `name`, `used`, `can be used`, `idCardCustomer` FROM `active_services`  WHERE idCardCustomer = " + idCardCudtomer +  " GROUP BY  active_services.id";
+			string disciplineSearchName = disciplineSearchField.Text;
 
+			string query = "SELECT `id`, `discipline`, `start`, `finish`, `trainer`, DAYname(start) FROM `group_training` WHERE discipline = '" + disciplineSearchName + "' ORDER BY id";
+
+			
 			MySqlCommand command = new MySqlCommand(query, mySqlConnection);
 
 			MySqlDataReader reader = command.ExecuteReader();
@@ -102,13 +100,14 @@ namespace UchuWindowsForms_1
 
 			while (reader.Read())
 			{
-				data.Add(new string[5]);
+				data.Add(new string[6]);
 
 				data[data.Count - 1][0] = reader[0].ToString();
 				data[data.Count - 1][1] = reader[1].ToString();
 				data[data.Count - 1][2] = reader[2].ToString();
 				data[data.Count - 1][3] = reader[3].ToString();
 				data[data.Count - 1][4] = reader[4].ToString();
+				data[data.Count - 1][5] = reader[5].ToString();
 			}
 			reader.Close();
 			mySqlConnection.Close();
@@ -119,47 +118,13 @@ namespace UchuWindowsForms_1
 				dataGridView1.Rows.Add(s);
 			}
 
-			if (data.Count == 0)
-			{
-				MessageBox.Show("Карты с таким номером не найдено");
-			}
-
-
 		}
 
-		private void useServiseButFunction()
+		private void back_Click(object sender, EventArgs e)
 		{
-
-			string connectString;
-
-			connectString = "server=localhost; port=3306; username=root; password=root; database=fitness_center";
-
-			MySqlConnection mySqlConnection = new MySqlConnection(connectString);
-
-			mySqlConnection.Open();
-
-
-			string idCardCudtomer = cardIdFieldBotm.Text;
-			string idServis = servisIdFieldBotm.Text;
-			string query = "UPDATE `active_services` SET `used`= `used`+1 WHERE idCardCustomer=" + idCardCudtomer + " AND  id ="+ idServis;
-
-			MySqlCommand command = new MySqlCommand(query, mySqlConnection);
-
-
-			if (command.ExecuteNonQuery() == 1 )
-			{
-				MessageBox.Show("Услуга успешно списана");
-				return;
-			}
-			else
-			{
-				MessageBox.Show("Услуга не списана, проверьте правильность заполнения номера карты и услуги");
-				return;
-			}
-
+			this.Hide();
+			MainForm mainForm = new MainForm();//Переход на гоавную
+			mainForm.Show();
 		}
-
-
-
 	}
 }

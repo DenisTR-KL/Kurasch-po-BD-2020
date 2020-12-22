@@ -148,7 +148,7 @@
 			// back
 			// 
 			this.back.AutoSize = true;
-			this.back.Location = new System.Drawing.Point(3, 379);
+			this.back.Location = new System.Drawing.Point(7, 375);
 			this.back.Name = "back";
 			this.back.Size = new System.Drawing.Size(39, 13);
 			this.back.TabIndex = 9;
@@ -165,9 +165,9 @@
 			this.buttonAddServise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonAddServise.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonAddServise.ForeColor = System.Drawing.Color.White;
-			this.buttonAddServise.Location = new System.Drawing.Point(107, 331);
+			this.buttonAddServise.Location = new System.Drawing.Point(10, 298);
 			this.buttonAddServise.Name = "buttonAddServise";
-			this.buttonAddServise.Size = new System.Drawing.Size(157, 41);
+			this.buttonAddServise.Size = new System.Drawing.Size(346, 41);
 			this.buttonAddServise.TabIndex = 6;
 			this.buttonAddServise.Text = "Добавить услугу";
 			this.buttonAddServise.UseVisualStyleBackColor = false;

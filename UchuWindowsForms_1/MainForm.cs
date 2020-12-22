@@ -75,5 +75,13 @@ namespace UchuWindowsForms_1
 			useServise useServise1 = new useServise();
 			useServise1.Show();
 		}
+
+		private void buttonTimeTible_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+			TimeTible timeTible = new TimeTible();
+			timeTible.Show();
+
+		}
 	}
 }

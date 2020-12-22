@@ -30,24 +30,24 @@
 		{
 			this.topPanel = new System.Windows.Forms.Label();
 			this.mainPanel = new System.Windows.Forms.Panel();
+			this.useServisebutton = new System.Windows.Forms.Button();
+			this.servisIdFieldBotm = new System.Windows.Forms.TextBox();
+			this.serviseIdLabelBotm = new System.Windows.Forms.Label();
+			this.cardIdLabelBotm = new System.Windows.Forms.Label();
+			this.cardIdFieldBotm = new System.Windows.Forms.TextBox();
+			this.useServiseLable = new System.Windows.Forms.Label();
 			this.cardIdLabel = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.back = new System.Windows.Forms.Label();
-			this.buttonSearch = new System.Windows.Forms.Button();
-			this.cardIdField = new System.Windows.Forms.TextBox();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.closeButton = new System.Windows.Forms.Label();
 			this.idServise = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nameSer = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.used = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.CanBeUsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.idCardСolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.useServiseLable = new System.Windows.Forms.Label();
-			this.cardIdFieldBotm = new System.Windows.Forms.TextBox();
-			this.cardIdLabelBotm = new System.Windows.Forms.Label();
-			this.serviseIdLabelBotm = new System.Windows.Forms.Label();
-			this.servisIdFieldBotm = new System.Windows.Forms.TextBox();
-			this.useServisebutton = new System.Windows.Forms.Button();
+			this.back = new System.Windows.Forms.Label();
+			this.buttonSearch = new System.Windows.Forms.Button();
+			this.cardIdField = new System.Windows.Forms.TextBox();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.closeButton = new System.Windows.Forms.Label();
 			this.mainPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -86,6 +86,74 @@
 			this.mainPanel.Size = new System.Drawing.Size(752, 451);
 			this.mainPanel.TabIndex = 3;
 			// 
+			// useServisebutton
+			// 
+			this.useServisebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(156)))), ((int)(((byte)(47)))));
+			this.useServisebutton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.useServisebutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(219)))), ((int)(((byte)(58)))));
+			this.useServisebutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(84)))), ((int)(((byte)(30)))));
+			this.useServisebutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(179)))), ((int)(((byte)(32)))));
+			this.useServisebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.useServisebutton.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.useServisebutton.ForeColor = System.Drawing.Color.White;
+			this.useServisebutton.Location = new System.Drawing.Point(469, 371);
+			this.useServisebutton.Name = "useServisebutton";
+			this.useServisebutton.Size = new System.Drawing.Size(277, 54);
+			this.useServisebutton.TabIndex = 19;
+			this.useServisebutton.Text = "Использовать услугу";
+			this.useServisebutton.UseVisualStyleBackColor = false;
+			this.useServisebutton.Click += new System.EventHandler(this.useServisebutton_Click);
+			// 
+			// servisIdFieldBotm
+			// 
+			this.servisIdFieldBotm.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.servisIdFieldBotm.ForeColor = System.Drawing.Color.Black;
+			this.servisIdFieldBotm.Location = new System.Drawing.Point(17, 371);
+			this.servisIdFieldBotm.Multiline = true;
+			this.servisIdFieldBotm.Name = "servisIdFieldBotm";
+			this.servisIdFieldBotm.Size = new System.Drawing.Size(184, 54);
+			this.servisIdFieldBotm.TabIndex = 18;
+			// 
+			// serviseIdLabelBotm
+			// 
+			this.serviseIdLabelBotm.AutoSize = true;
+			this.serviseIdLabelBotm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.serviseIdLabelBotm.Location = new System.Drawing.Point(13, 345);
+			this.serviseIdLabelBotm.Name = "serviseIdLabelBotm";
+			this.serviseIdLabelBotm.Size = new System.Drawing.Size(111, 20);
+			this.serviseIdLabelBotm.TabIndex = 17;
+			this.serviseIdLabelBotm.Text = "Номер услуги";
+			// 
+			// cardIdLabelBotm
+			// 
+			this.cardIdLabelBotm.AutoSize = true;
+			this.cardIdLabelBotm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.cardIdLabelBotm.Location = new System.Drawing.Point(251, 345);
+			this.cardIdLabelBotm.Name = "cardIdLabelBotm";
+			this.cardIdLabelBotm.Size = new System.Drawing.Size(109, 20);
+			this.cardIdLabelBotm.TabIndex = 16;
+			this.cardIdLabelBotm.Text = "Номер карты";
+			// 
+			// cardIdFieldBotm
+			// 
+			this.cardIdFieldBotm.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.cardIdFieldBotm.ForeColor = System.Drawing.Color.Black;
+			this.cardIdFieldBotm.Location = new System.Drawing.Point(242, 371);
+			this.cardIdFieldBotm.Multiline = true;
+			this.cardIdFieldBotm.Name = "cardIdFieldBotm";
+			this.cardIdFieldBotm.Size = new System.Drawing.Size(184, 54);
+			this.cardIdFieldBotm.TabIndex = 15;
+			// 
+			// useServiseLable
+			// 
+			this.useServiseLable.AutoSize = true;
+			this.useServiseLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.useServiseLable.Location = new System.Drawing.Point(12, 306);
+			this.useServiseLable.Name = "useServiseLable";
+			this.useServiseLable.Size = new System.Drawing.Size(211, 25);
+			this.useServiseLable.TabIndex = 14;
+			this.useServiseLable.Text = "Используйте услугу";
+			// 
 			// cardIdLabel
 			// 
 			this.cardIdLabel.AutoSize = true;
@@ -110,10 +178,35 @@
 			this.dataGridView1.Size = new System.Drawing.Size(546, 213);
 			this.dataGridView1.TabIndex = 10;
 			// 
+			// idServise
+			// 
+			this.idServise.HeaderText = "Номер услуги";
+			this.idServise.Name = "idServise";
+			// 
+			// nameSer
+			// 
+			this.nameSer.HeaderText = "Название услуги";
+			this.nameSer.Name = "nameSer";
+			// 
+			// used
+			// 
+			this.used.HeaderText = "Использаванно";
+			this.used.Name = "used";
+			// 
+			// CanBeUsed
+			// 
+			this.CanBeUsed.HeaderText = "Осталось использований";
+			this.CanBeUsed.Name = "CanBeUsed";
+			// 
+			// idCardСolumn
+			// 
+			this.idCardСolumn.HeaderText = "Номер карты клиента";
+			this.idCardСolumn.Name = "idCardСolumn";
+			// 
 			// back
 			// 
 			this.back.AutoSize = true;
-			this.back.Location = new System.Drawing.Point(3, 437);
+			this.back.Location = new System.Drawing.Point(3, 429);
 			this.back.Name = "back";
 			this.back.Size = new System.Drawing.Size(39, 13);
 			this.back.TabIndex = 9;
@@ -171,99 +264,6 @@
 			this.closeButton.TabIndex = 1;
 			this.closeButton.Text = "x";
 			this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-			// 
-			// idServise
-			// 
-			this.idServise.HeaderText = "Номер услуги";
-			this.idServise.Name = "idServise";
-			// 
-			// nameSer
-			// 
-			this.nameSer.HeaderText = "Название услуги";
-			this.nameSer.Name = "nameSer";
-			// 
-			// used
-			// 
-			this.used.HeaderText = "Использаванно";
-			this.used.Name = "used";
-			// 
-			// CanBeUsed
-			// 
-			this.CanBeUsed.HeaderText = "Осталось использований";
-			this.CanBeUsed.Name = "CanBeUsed";
-			// 
-			// idCardСolumn
-			// 
-			this.idCardСolumn.HeaderText = "Номер карты клиента";
-			this.idCardСolumn.Name = "idCardСolumn";
-			// 
-			// useServiseLable
-			// 
-			this.useServiseLable.AutoSize = true;
-			this.useServiseLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.useServiseLable.Location = new System.Drawing.Point(12, 306);
-			this.useServiseLable.Name = "useServiseLable";
-			this.useServiseLable.Size = new System.Drawing.Size(211, 25);
-			this.useServiseLable.TabIndex = 14;
-			this.useServiseLable.Text = "Используйте услугу";
-			// 
-			// cardIdFieldBotm
-			// 
-			this.cardIdFieldBotm.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.cardIdFieldBotm.ForeColor = System.Drawing.Color.Black;
-			this.cardIdFieldBotm.Location = new System.Drawing.Point(242, 371);
-			this.cardIdFieldBotm.Multiline = true;
-			this.cardIdFieldBotm.Name = "cardIdFieldBotm";
-			this.cardIdFieldBotm.Size = new System.Drawing.Size(184, 54);
-			this.cardIdFieldBotm.TabIndex = 15;
-			// 
-			// cardIdLabelBotm
-			// 
-			this.cardIdLabelBotm.AutoSize = true;
-			this.cardIdLabelBotm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.cardIdLabelBotm.Location = new System.Drawing.Point(251, 345);
-			this.cardIdLabelBotm.Name = "cardIdLabelBotm";
-			this.cardIdLabelBotm.Size = new System.Drawing.Size(109, 20);
-			this.cardIdLabelBotm.TabIndex = 16;
-			this.cardIdLabelBotm.Text = "Номер карты";
-			// 
-			// serviseIdLabelBotm
-			// 
-			this.serviseIdLabelBotm.AutoSize = true;
-			this.serviseIdLabelBotm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.serviseIdLabelBotm.Location = new System.Drawing.Point(13, 345);
-			this.serviseIdLabelBotm.Name = "serviseIdLabelBotm";
-			this.serviseIdLabelBotm.Size = new System.Drawing.Size(111, 20);
-			this.serviseIdLabelBotm.TabIndex = 17;
-			this.serviseIdLabelBotm.Text = "Номер услуги";
-			// 
-			// servisIdFieldBotm
-			// 
-			this.servisIdFieldBotm.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.servisIdFieldBotm.ForeColor = System.Drawing.Color.Black;
-			this.servisIdFieldBotm.Location = new System.Drawing.Point(17, 371);
-			this.servisIdFieldBotm.Multiline = true;
-			this.servisIdFieldBotm.Name = "servisIdFieldBotm";
-			this.servisIdFieldBotm.Size = new System.Drawing.Size(184, 54);
-			this.servisIdFieldBotm.TabIndex = 18;
-			// 
-			// useServisebutton
-			// 
-			this.useServisebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(156)))), ((int)(((byte)(47)))));
-			this.useServisebutton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.useServisebutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(219)))), ((int)(((byte)(58)))));
-			this.useServisebutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(84)))), ((int)(((byte)(30)))));
-			this.useServisebutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(179)))), ((int)(((byte)(32)))));
-			this.useServisebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.useServisebutton.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.useServisebutton.ForeColor = System.Drawing.Color.White;
-			this.useServisebutton.Location = new System.Drawing.Point(469, 371);
-			this.useServisebutton.Name = "useServisebutton";
-			this.useServisebutton.Size = new System.Drawing.Size(277, 54);
-			this.useServisebutton.TabIndex = 19;
-			this.useServisebutton.Text = "Использовать услугу";
-			this.useServisebutton.UseVisualStyleBackColor = false;
-			this.useServisebutton.Click += new System.EventHandler(this.useServisebutton_Click);
 			// 
 			// useServise
 			// 

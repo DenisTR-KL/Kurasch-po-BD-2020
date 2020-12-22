@@ -70,7 +70,7 @@
 			this.buttonUseServise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonUseServise.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonUseServise.ForeColor = System.Drawing.Color.White;
-			this.buttonUseServise.Location = new System.Drawing.Point(463, 316);
+			this.buttonUseServise.Location = new System.Drawing.Point(463, 239);
 			this.buttonUseServise.Name = "buttonUseServise";
 			this.buttonUseServise.Size = new System.Drawing.Size(315, 41);
 			this.buttonUseServise.TabIndex = 12;
@@ -106,7 +106,7 @@
 			this.buttonServiseCatalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonServiseCatalog.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonServiseCatalog.ForeColor = System.Drawing.Color.White;
-			this.buttonServiseCatalog.Location = new System.Drawing.Point(463, 239);
+			this.buttonServiseCatalog.Location = new System.Drawing.Point(463, 159);
 			this.buttonServiseCatalog.Name = "buttonServiseCatalog";
 			this.buttonServiseCatalog.Size = new System.Drawing.Size(315, 41);
 			this.buttonServiseCatalog.TabIndex = 10;
@@ -124,12 +124,13 @@
 			this.buttonTimeTible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonTimeTible.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonTimeTible.ForeColor = System.Drawing.Color.White;
-			this.buttonTimeTible.Location = new System.Drawing.Point(463, 159);
+			this.buttonTimeTible.Location = new System.Drawing.Point(463, 316);
 			this.buttonTimeTible.Name = "buttonTimeTible";
 			this.buttonTimeTible.Size = new System.Drawing.Size(315, 41);
 			this.buttonTimeTible.TabIndex = 9;
 			this.buttonTimeTible.Text = "Расписание групповых занятий";
 			this.buttonTimeTible.UseVisualStyleBackColor = false;
+			this.buttonTimeTible.Click += new System.EventHandler(this.buttonTimeTible_Click);
 			// 
 			// buttonCardRegistration
 			// 
